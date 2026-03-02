@@ -11,11 +11,31 @@
 # 'Ожидаемый результат': '<вывод ожидаемого результата>'}.
 
 class TestCase:
-
     def __init__(self):
-   ...
-   ...
+        self.steps = {}  # Инициализация пустого словаря для шагов
+        self.result = None  # Инициализация ожидаемого результата как None
 
+    def set_step(self, step_number, step_text):
+        """Добавляет шаг в словарь steps"""
+        self.steps[step_number] = step_text
+
+    def delete_step(self, step_number):
+        """Удаляет шаг из словаря steps по номеру"""
+        if step_number in self.steps:
+            del self.steps[step_number]
+
+    def set_result(self, result):
+        """Устанавливает ожидаемый результат"""
+        self.result = result
+
+    def get_test_case(self):
+        """Выводит информацию о тест-кейсе в заданном формате"""
+        print({
+            'Шаги': self.steps,
+            'Ожидаемый результат': self.result
+        })
+
+# Пример использования
 test_case_1 = TestCase()
 test_case_1.set_step(1, 'Перейти на сайт')
 test_case_1.set_step(3, 'Перейти в раздел Товары')
@@ -30,4 +50,4 @@ test_case_2.set_step(1, 'Перейти на сайт')
 test_case_2.set_step(2, 'Перейти в раздел Корзина')
 test_case_2.set_step(3, 'Нажать кнопку "Удалить"')
 test_case_2.set_result('Товар удален из корзины')
-test_case_2.get_test_case()
+test_case_2.get_test_case() 
