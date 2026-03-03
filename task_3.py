@@ -8,8 +8,8 @@ world_champions = {
 }
 
 world_champions[2022] = 'Аргентина' # Добавь в словарь 2022 год. В 2022 году чемпионом стала Аргентина.
-print(world_champions) # Выведи на экран всех чемпионов в формате год - страна.
-
+for k, v in world_champions.items(): # Выведи на экран всех чемпионов в формате год - страна.
+    print(f"{k}: {v}")
 country = 'Италия'
 
 if country in world_champions.values():

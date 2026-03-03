@@ -2,9 +2,9 @@ class Tester:
 
     def __init__(self, name, deadline=True):
         self.name = name
-        self.deadline = True
+        self.deadline = deadline
 
-    def work_hard(self, deadline=True):
+    def work_hard(self, deadline):
         if deadline:
             print(self.name, 'Что ж, ещё часок поработаю!')
         else:

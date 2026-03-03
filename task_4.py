@@ -17,5 +17,3 @@ new_tasks.remove('task_007') # Запрос task_007 заказчик убрал
 print(new_tasks[-1]) # В последней задаче из списка new_tasks заказчик поднял приоритет, поэтому её нужно будет взять в работу следующей. Выведи её на экран.
 
 
-# print(new_tasks)
-# print(completed_tasks)
